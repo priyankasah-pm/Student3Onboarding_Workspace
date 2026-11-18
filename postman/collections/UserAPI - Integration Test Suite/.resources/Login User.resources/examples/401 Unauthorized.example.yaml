@@ -1,0 +1,17 @@
+$kind: http-example
+name: 401 Unauthorized
+request:
+  url: '{{baseUrl}}/v1/users/login'
+  method: POST
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "Invalid username or password"
+      }
